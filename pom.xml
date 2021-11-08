@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.iut-blagnac.f21</groupId>
+    <groupId>io.github.ace-lectures</groupId>
     <artifactId>tp0</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>CPOA intial TP</name>
@@ -14,48 +14,34 @@
     </properties>
 
     <dependencies>
-        <!-- *********************************
-             ** Business Logic dependencies **
-             ********************************* -->
-        <!-- Ultra-light REST framework to create a Web Service -->
         <dependency>
             <groupId>io.jooby</groupId>
             <artifactId>jooby-netty</artifactId>
             <version>2.11.0</version>
         </dependency>
-        <!-- Logging framework to monitor the service  -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.6</version>
         </dependency>
-
-        <!-- ******************************************
-             ** Acceptance & Unit Tests dependencies **
-             ****************************************** -->
-
-        <!-- Unit tests in Java (step II.1) -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- Acceptance tests in Java (Step II.3) -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>6.11.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- Bridging acceptance tests to unit tests (Step II.3) -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>6.11.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- Mock objects to simulate non existing artefacts (Step III.8.C)-->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
