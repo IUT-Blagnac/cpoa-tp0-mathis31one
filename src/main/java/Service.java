@@ -11,8 +11,8 @@ public class Service extends Jooby {
         get("/orders", ctx -> getAllOrders() );
         get("/orders/{owner}/{recipient}/{drink}", ctx -> {
             Order o = addOrder(ctx.path("owner").value(),
-                               ctx.path("recipient").value(),
-                               ctx.path("drink").value());
+                    ctx.path("recipient").value(),
+                    ctx.path("drink").value());
             return "added " + o;
         });
     }
@@ -23,10 +23,10 @@ public class Service extends Jooby {
         if(orders.isEmpty())
             return "Nothing to show";
         return orders.stream()
-                     .map(Order::toString)
-                     .reduce("",(s1,s2) -> s1 +"\n" + s2);
+                .map(Order::toString)
+                .reduce("",(s1,s2) -> s1 +"\n" + s2);
     }
-    
+
     public Order addOrder(String owner, String recipient, String drinkName) {
         Order o = new Order();
         o.setOwner(owner);
